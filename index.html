@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="testApp">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  <script src="voiture.js"></script>
+  <title>Exercice2</title>
+</head>
+<body>
+  <!--On récupère les données-->
+  <div ng-controller="carsCtrl">
+    <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+      <thead>
+        <th>Marque</th>
+        <th>Couleur</th>
+      </thead>
+      <!--Liste des voitures par marque et par couleur-->
+        <tr ng-repeat="car in cars">
+          <td>
+            {{car.marque}}
+          </td>
+          <td>
+            {{car.couleur}}
+          </td>
+        </tr>
+    </table>
+  </div>
+</body>
+</html>
